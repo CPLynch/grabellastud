@@ -10,24 +10,15 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css.css" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet" />
     </head>
 
     <body>
- 
-
         <div id="page-header">
             <div class="container-top">
                 <div id="phone">
                     <h2>
-                        <img
-                            id="phone-icon"
-                            src="./phone-icon.png"
-                            alt="Phone:"
-                        />
+                        <img id="phone-icon" src="./phone-icon.png" alt="Phone:" />
                         01638 751888
                     </h2>
                 </div>
@@ -37,11 +28,7 @@
                     </ul>
                 </div>
                 <div id="logo-container">
-                    <img
-                        id="main-logo"
-                        alt="Grabella Stud logo"
-                        src="./logo.png"
-                    />
+                    <img id="main-logo" alt="Grabella Stud logo" src="./logo.png" />
                     <h1>Grabella Stud</h1>
                 </div>
             </div>
@@ -197,16 +184,14 @@
                 a.async = 1;
                 a.src = g;
                 m.parentNode.insertBefore(a, m);
-            })(
-                window,
-                document,
-                "script",
-                "https://www.google-analytics.com/analytics.js",
-                "ga"
-            );
+            })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
 
             ga("create", "UA-84339522-1", "auto");
             ga("send", "pageview");
+
+            if (window.location.protocol != "https:") {
+                window.location.protocol = "https";
+            }
         </script>
     </body>
 </html>
