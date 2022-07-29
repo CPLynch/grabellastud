@@ -1,0 +1,251 @@
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+
+.sticky-nav{
+	position:fixed;
+	top:-100px;
+	width:100%;
+	background-color:white;
+	z-index:10;
+}
+.container-top{
+	max-width:1024px;
+	width:90%;
+	margin:0 auto;
+	padding:0;
+	
+}
+.container-bottom{
+	max-width:870px;
+	width:90%;
+	margin:0 auto;
+	padding:0;
+}
+#page-header {
+	margin:0; /*negative margin accounts for space left over from relative positioning of stripe-box*/
+	padding:0;
+}
+.page-header-underlay-active{
+	height:144.92px;
+	width:100%;
+}
+#phone-icon{
+	width:30px;
+	position:relative;
+	top:8px;
+}
+#phone{
+	float:right;
+	padding:10px 10% 0px 0px;
+	opacity:0.7;
+}
+#area{
+	float:right;
+	padding:18px;
+}
+#des{
+	margin:10px 10% 10px 0;
+	font-size:14px;
+	float:right;
+	clear:right;
+	padding-top:12px;
+}
+#des ul{
+	display:inline;
+	margin:0 auto;
+	text-align:center;
+	padding:0;
+}
+#des ul li{
+	list-style:none;
+	font-weight:600;
+	display:inline;
+	opacity:0.7;
+	transition: opacity 0.4s;
+	height:20px;
+}
+#des ul li:hover{
+	opacity:1;
+	transition: opacity 0.4s;
+}
+#stripe-box{
+	position:relative;
+	bottom:8px;
+	z-index: -1;
+}
+.stripe{ 
+	position: absolute;
+	width:100%;
+	height:8px;
+	background-color:rgb(21,89,23);
+	
+}
+#logo-container{
+	background-color:rgb(21,89,23);
+	color:#F4F281;
+	margin:0 0 0 35px;
+	width:240px;
+}
+
+h1 {
+	margin:0;
+	text-align:center;
+	font-size:28px;
+	padding:0px 0 6px 0;
+	font-family: 'Playfair Display', serif;
+}
+#main-logo {
+	display:block;
+	width:100px;
+	margin:0 auto;
+	text-align:center;
+	padding-top:12px;
+}
+#slider{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:450px;
+	overflow:hidden;
+	position:relative;
+	bottom: 0;
+	right: 0;
+}
+#slider li{
+	position:absolute;
+	bottom: 0;
+	right: 0;
+	list-style:none;
+	margin:0;
+	padding:0;
+	display:inline-block;
+	width :100%;
+	height:100%;
+	opacity: 1;
+  -webkit-transition: opacity 1.5s;
+  -moz-transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+
+}
+#a{
+	background:url("./stables.jpg") no-repeat center 30% local; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#b{
+	background:url("./indoor-school.jpg") no-repeat center 30% local; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#c{
+	background:url("./paddock.jpg") no-repeat center 30% local; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#ball-container{
+	width:50%;
+	margin:0 auto;
+	text-align:center;
+	position: relative;
+	bottom: 70px;
+}	
+.balls{
+	width:38px;
+	height: 38px;
+	background-color:rgb(21,89,23);
+	border:solid;
+	border-width:4px;
+	display:inline-block;
+	margin: 0 3%;
+	border-radius:100px;
+	opacity:0.6;
+	-webkit-transition: opacity 1.5s;
+  -moz-transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+#entrance{
+	height:350px;
+	margin:30px auto;
+		background:url("./entrance.jpg") no-repeat center 30% local; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#find-us{
+	height: 500px;
+	margin-top: 45px;
+}
+#address{
+	display:inline-block;
+	float: left;
+}
+
+iframe{
+	float:right;
+}
+
+#bottom-logo{
+	background-color:rgb(21,89,23);
+	display: inline-block;
+	position:relative;
+	top:35px;
+	margin-top:-35px;
+}
+#mini-logo{
+	width:50px;
+	padding:8px 8px 0 8px;
+}
+iframe{
+	width:54%;
+	height:390px;
+}
+#footer{
+	height:40px;
+	width:100%;
+	background-color:rgb(21,89,23);
+	
+}
+@media (max-width:678px){
+	body{
+		font-size:14px;
+	}
+	#main-logo{
+		width:70%;
+	}
+	#logo-container{
+		width:30%
+	}
+	h1{
+		font-size:18px;
+	}
+	#phone h2{
+		font-size:14px;
+	}
+	#phone-icon{
+		width:22px;
+	}
+	#des{
+		display:none;
+	}
+	
+	#mobile-remove{
+		display:none;
+	}
+	iframe{
+		width:100%;
+		height:60vh;
+		float:none;
+	}
+}

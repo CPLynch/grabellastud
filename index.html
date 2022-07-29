@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Grabella Stud | DIY Livery Yard</title>
+        <meta
+            name="description"
+            content="Operating for over 30 years Grabella Stud is a small, friendly DIY livery located in the Newmarket Area."
+        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+ 
+
+        <div id="page-header">
+            <div class="container-top">
+                <div id="phone">
+                    <h2>
+                        <img
+                            id="phone-icon"
+                            src="./phone-icon.png"
+                            alt="Phone:"
+                        />
+                        01638 751888
+                    </h2>
+                </div>
+                <div id="des">
+                    <ul>
+                        <li>DIY livery located in the Newmarket area</li>
+                    </ul>
+                </div>
+                <div id="logo-container">
+                    <img
+                        id="main-logo"
+                        alt="Grabella Stud logo"
+                        src="./logo.png"
+                    />
+                    <h1>Grabella Stud</h1>
+                </div>
+            </div>
+            <div id="stripe-box">
+                <div class="stripe"></div>
+            </div>
+        </div>
+
+        <div id="page-header-underlay"></div>
+
+        <ul id="slider">
+            <li class="fader" id="a"></li>
+            <li class="fader" id="b" style="z-index: -10"></li>
+            <li class="fader" id="c" style="z-index: -20"></li>
+        </ul>
+
+        <div id="ball-container">
+            <div class="balls" onclick="select1()" style="opacity: 0.8"></div>
+            <div class="balls" onclick="select2()"></div>
+            <div class="balls" onclick="select3()"></div>
+        </div>
+
+        <div class="container-bottom">
+            <div id="about">
+                <h4>About</h4>
+                <p>
+                    Grabella Stud is a small, friendly DIY livery located in the Newmarket area. Operating for over 30
+                    years, the yard has been run, and managed, successfully in a flexible and genial manner. It has
+                    eight 12 by 12 ft stables, traditionaly constructed from block and tiles. All clients have a
+                    designated paddock and access to off road hacking straight from the yard. We like to foster good
+                    relations between managment and clients, and welcome you to come and view the facilities available.
+                </p>
+                Price available upon enquiry.
+            </div>
+
+            <div id="entrance"></div>
+
+            <div id="facilities">
+                <h4>Facilities</h4>
+                <ul>
+                    <li>8 boxes 12x12ft</li>
+                    <li>All year turnout</li>
+                    <li>Box light and electric supply</li>
+                    <li>Indoor School 14x29m</li>
+                    <li>Hacking on byway attached to the yard</li>
+                    <li>Secure Storage</li>
+                    <li>Place to make tea and coffee</li>
+                </ul>
+                <h3>Currently 1 vacancy</h3>
+            </div>
+
+            <div id="find-us">
+                <div id="address">
+                    <h4>Address</h4>
+                    <p>
+                        Grabella Stud <br />
+                        Herringswell Road <br />
+                        Kentford <br />
+                        Newmarket <br />
+                        Suffolk <br />
+                        CB8 7QS
+                    </p>
+                    <p>You can call Carol on 01638751888<br />or alternativly 07763120273</p>
+                </div>
+
+                <iframe
+                    frameborder="0"
+                    style="border: 0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA7C9V7CwT3MhEq5We4e7gJW0FQzLLZEK4&amp;q=Grabella+Stud"
+                    allowfullscreen
+                >
+                </iframe>
+            </div>
+        </div>
+        <div class="container-top" id="mobile-remove">
+            <div id="bottom-logo">
+                <img id="mini-logo" src="./logo.png" />
+            </div>
+        </div>
+        <div id="footer"></div>
+
+        <script>
+            //Image swapper script
+
+            var elems = document.getElementsByClassName("fader");
+            var blobs = document.getElementsByClassName("balls");
+            var j = 0;
+            var i;
+            function swapper(b) {
+                elems[j].style.opacity = "0";
+                blobs[j].style.opacity = "0.56";
+                if (j < elems.length - 1) {
+                    j++;
+                } else {
+                    j = 0;
+                }
+                if (b !== undefined) {
+                    console.log(b);
+                    j = b;
+                }
+                console.log(j);
+                elems[j].style.opacity = "1";
+                blobs[j].style.opacity = "0.85";
+            }
+            var timer = setInterval(swapper, 12000);
+            for (i = 1; i < elems.length; i++) {
+                elems[i].style.opacity = "0";
+            }
+            var select1 = function () {
+                clearTimeout(timer);
+                swapper(0);
+            };
+            var select2 = function () {
+                clearTimeout(timer);
+                swapper(1);
+            };
+            var select3 = function () {
+                clearTimeout(timer);
+                swapper(2);
+            };
+
+            //sticky-nav script
+
+            var ph = document.getElementById("page-header");
+            var phu = document.getElementById("page-header-underlay");
+
+            function navScroll() {
+                if (window.pageYOffset >= 100) {
+                    ph.className = "sticky-nav ";
+                    phu.className = "page-header-underlay-active ";
+                } else {
+                    ph.className = "";
+                    phu.className = "";
+                }
+            }
+            window.onscroll = navScroll;
+
+            //jump down page onclick script - deactivated
+            var about = function () {
+                document.getElementById("about").scrollIntoView(true);
+            };
+        </script>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i["GoogleAnalyticsObject"] = r;
+                (i[r] =
+                    i[r] ||
+                    function () {
+                        (i[r].q = i[r].q || []).push(arguments);
+                    }),
+                    (i[r].l = 1 * new Date());
+                (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(
+                window,
+                document,
+                "script",
+                "https://www.google-analytics.com/analytics.js",
+                "ga"
+            );
+
+            ga("create", "UA-84339522-1", "auto");
+            ga("send", "pageview");
+        </script>
+    </body>
+</html>
